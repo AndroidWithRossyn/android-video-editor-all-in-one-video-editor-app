@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#efeff4" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="50dp">
+        <ImageView android:id="@+id/btn_back" android:background="@drawable/back_unpresed" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="16dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textSize="20dp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Moments" android:layout_toRightOf="@+id/btn_back" android:layout_centerVertical="true"/>
+        <ImageView android:id="@+id/btnNext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@drawable/ic_done" android:tint="#ffffff" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp">
+                <com.androworld.allinonevideoeditor.phototovideo.tablayout.SlidingTabLayout
+                    android:id="@+id/sliding_tabs" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+            <androidx.viewpager.widget.ViewPager android:id="@+id/pager" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

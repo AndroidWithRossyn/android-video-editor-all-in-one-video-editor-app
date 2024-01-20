@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/banner_AdView"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/RlFilename"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:background="#ffffff">
+
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:id="@+id/Filename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textAppearance="?android:attr/textAppearance"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/SeekbarLayout"
+            android:layout_below="@+id/RlFilename"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+
+            <VideoView
+                android:id="@+id/addcutsvideoview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:keepScreenOn="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/SeekbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/TimeLayout"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.7"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/videoplaybtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/play2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/seekLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:orientation="vertical" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/TimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/VideoRotateLayout"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="15dp">
+
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:id="@+id/left_pointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="00:00"
+                android:textAppearance="?android:attr/textAppearance"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:id="@+id/mid_pointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="00:00"
+                android:textAppearance="?android:attr/textAppearance"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:id="@+id/right_pointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:text="00:00"
+                android:textAppearance="?android:attr/textAppearance"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/VideoRotateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/back_rightmirror"
+                            android:layout_width="152dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_border_shape"
+                            android:clickable="false"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/btn_rightmirror"
+                            android:layout_width="145dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_shape"
+                            android:clickable="true">
+
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="Right Mirror"
+                                android:textColor="@color/color_white_color"
+                                android:textSize="17dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/back_leftmirror"
+                            android:layout_width="152dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_border_shape"
+                            android:clickable="false"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/btn_leftmirror"
+                            android:layout_width="145dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_shape"
+                            android:clickable="true">
+
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="Left Mirror"
+                                android:textColor="@color/color_white_color"
+                                android:textSize="17dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/back_TopMirror"
+                            android:layout_width="152dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_border_shape"
+                            android:clickable="false"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/btn_TopMirror"
+                            android:layout_width="145dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_shape"
+                            android:clickable="true">
+
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="Top Mirror"
+                                android:textColor="@color/color_white_color"
+                                android:textSize="17dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/back_BottumMirror"
+                            android:layout_width="152dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_border_shape"
+                            android:clickable="false"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/btn_BottumMirror"
+                            android:layout_width="145dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button_shape"
+                            android:clickable="true">
+
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="Bottum Mirror"
+                                android:textColor="@color/color_white_color"
+                                android:textSize="17dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/banner_AdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" />
+</RelativeLayout>

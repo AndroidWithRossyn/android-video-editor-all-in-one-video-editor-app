@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="80dp" android:layout_height="wrap_content" app:cardCornerRadius="3dp" app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/imageView1" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="5dp" android:scaleType="centerCrop" android:layout_centerHorizontal="true"/>
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textSize="12sp" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/country_name" android:background="#ffffff" android:layout_width="120dp" android:layout_height="wrap_content" android:lines="2" android:layout_below="@+id/imageView1"/>
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textSize="15sp" android:textColor="#ffffff" android:gravity="center"
+            android:background="@color/colorPrimary" android:layout_width="120dp" android:layout_height="wrap_content" android:text="Install" android:lines="2" android:layout_below="@+id/country_name"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

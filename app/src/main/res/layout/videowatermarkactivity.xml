@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#efeff4" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar"/>
+    <RelativeLayout android:id="@+id/RlFilename" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginRight="5dp" android:layout_below="@+id/toolbar">
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textStyle="bold" android:textColor="#000000" android:id="@+id/Filename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/mainLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/RlFilename">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_above="@+id/last">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="0.5">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <VideoView android:id="@+id/videoView1" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_centerVertical="true"/>
+                    <FrameLayout android:id="@+id/flEditor" android:background="@drawable/transbg1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+                        <com.androworld.allinonevideoeditor.videowatermark.addtext.StickerView
+                            android:id="@+id/sticker_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_weight="1">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_weight="0.9">
+                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginBottom="15dp" android:layout_weight="1.2">
+                        <LinearLayout android:gravity="center" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.1">
+                            <ImageView android:id="@+id/buttonply" android:background="@drawable/pause2" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2">
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:textColor="@color/colorPrimary" android:gravity="left" android:id="@+id/left_pointer" android:paddingLeft="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.6">
+                            <com.androworld.allinonevideoeditor.VideoSliceSeekBar
+                                android:id="@+id/seek_bar" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:paddingBottom="6dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.2">
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:textColor="@color/colorPrimary" android:gravity="right" android:id="@+id/right_pointer" android:paddingRight="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.1">
+                    <RelativeLayout android:id="@+id/frme" android:background="#ffffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:listSelector="@android:color/transparent" android:layout_below="@+id/seatLegendLayout" android:overScrollMode="never">
+                                <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                    <LinearLayout android:orientation="horizontal"
+                                        android:layout_width="5050dp" android:layout_height="match_parent">
+                                        <GridView android:scrollbarAlwaysDrawHorizontalTrack="true" android:scrollbarAlwaysDrawVerticalTrack="true" android:gravity="center" android:id="@+id/horizontal_gridView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:listSelector="@android:color/transparent" android:horizontalSpacing="1dp" android:verticalSpacing="1dp" android:stretchMode="none" android:columnWidth="100dp" android:numColumns="50" android:contentDescription="@null" android:overScrollMode="never"/>
+                                    </LinearLayout>
+                                </FrameLayout>
+                            </HorizontalScrollView>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/last" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_weight="1">
+                <ImageView
+                    android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:id="@+id/addtext" android:background="@drawable/addtext_presed" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:id="@+id/sticker" android:background="@drawable/addlogo_presed" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_weight="1">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <include android:visibility="gone" layout="@layout/videowatermark_stickerview"/>
+    <include android:visibility="gone" layout="@layout/videowatermark_textstickerview"/>
+</RelativeLayout>

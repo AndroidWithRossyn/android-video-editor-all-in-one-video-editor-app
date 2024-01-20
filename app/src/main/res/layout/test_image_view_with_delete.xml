@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ImageView android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/view" android:background="#ffff0000" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="200dp" android:layout_height="200dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+    <ImageView android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/push_view" android:background="#aa333333" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="0dp" android:layout_marginTop="0dp"/>
+    <ImageView android:id="@+id/push_delete" android:background="#aa333333" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="0dp" android:layout_marginTop="0dp" android:minWidth="0dp" android:minHeight="0dp"/>
+</FrameLayout>

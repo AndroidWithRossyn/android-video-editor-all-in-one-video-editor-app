@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/stickerFullLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:weightSum="3">
+            <LinearLayout android:gravity="center" android:id="@+id/stickerCross" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.3">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/cancel_btn" android:tint="#ffffff"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.4">
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:textSize="16dp" android:textStyle="bold" android:textColor="#ffffff" android:id="@+id/stickerCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:textSize="16dp" android:textStyle="bold" android:textColor="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" / 10"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/stickerCheck" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.3">
+                <ImageView android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ic_done" android:tint="#ffffff"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@drawable/toolbar_dropshadow" android:layout_width="match_parent" android:layout_height="3dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:background="#efeff4" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.4"/>
+            <View android:background="@drawable/toolbar_dropshadow_bottom" android:visibility="gone" android:layout_width="match_parent" android:layout_height="3dp"/>
+            <FrameLayout android:id="@+id/tab" android:background="@color/Footer_Color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.6"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

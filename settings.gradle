@@ -1,0 +1,2 @@
+rootProject.name='Videoeditorpro'
+include ':app'

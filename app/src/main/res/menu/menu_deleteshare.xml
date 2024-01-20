@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@drawable/delete_unpresed" android:id="@+id/Delete" android:orderInCategory="100" android:title="Delete" app:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/icon_share" android:id="@+id/Share" android:orderInCategory="100" android:title="Share" app:showAsAction="ifRoom"/>
+</menu>

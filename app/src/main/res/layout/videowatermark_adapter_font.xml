@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="60dp">
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textSize="20dp" android:ellipsize="marquee" android:gravity="center" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Blend Me" android:singleLine="true" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

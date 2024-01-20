@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:id="@+id/llThumb" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout android:background="@drawable/filter_border" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@+id/ivThumb" android:layout_width="50dp" android:layout_height="50dp" android:scaleType="fitXY"/>
+    </FrameLayout>
+    <TextView android:textSize="10dp" android:textColor="@android:color/white" android:id="@+id/tvEffectName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="effect"/>
+</LinearLayout>

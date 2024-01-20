@@ -1,0 +1,109 @@
+{
+    "collageframes": [{
+        "id": "frame0",
+        "type": "r",
+        "noofrc": "1",
+        "values": [{
+            "row": "1"
+        }]
+    }, {
+        "id": "frame1",
+        "type": "r",
+        "noofrc": "1",
+        "values": [{
+            "row": "2"
+        }]
+    }, {
+        "id": "frame2",
+        "type": "r",
+        "noofrc": "2",
+        "values": [{
+            "row": "1"
+        }, {
+            "row": "1"
+        }]
+    }, {
+        "id": "frame3",
+        "type": "r",
+        "noofrc": "3",
+        "values": [{
+            "row": "1"
+        }, {
+            "row": "1"
+        }, {
+            "row": "1"
+        }]
+    }, {
+        "id": "frame4",
+        "type": "r",
+        "noofrc": "1",
+        "values": [{
+            "row": "3"
+        }]
+    }, {
+        "id": "frame5",
+        "type": "r",
+        "noofrc": "2",
+        "values": [{
+            "row": "2"
+        }, {
+            "row": "1"
+        }]
+    }, {
+        "id": "frame6",
+        "type": "r",
+        "noofrc": "2",
+        "values": [{
+            "row": "1"
+        }, {
+            "row": "2"
+        }]
+    }, {
+        "id": "frame7",
+        "type": "c",
+        "noofrc": "2",
+        "values": [{
+            "row": "2"
+        }, {
+            "row": "1"
+        }]
+    }, {
+        "id": "frame8",
+        "type": "c",
+        "noofrc": "2",
+        "values": [{
+            "row": "1"
+        }, {
+            "row": "2"
+        }]
+    }, {
+        "id": "frame9",
+        "type": "r",
+        "noofrc": "4",
+        "values": [{
+            "row": "1"
+        }, {
+            "row": "1"
+        }, {
+            "row": "1"
+        }, {
+            "row": "1"
+        }]
+    }, {
+        "id": "frame10",
+        "type": "r",
+        "noofrc": "1",
+        "values": [{
+            "row": "4"
+        }]
+    }, {
+        "id": "frame11",
+        "type": "r",
+        "noofrc": "2",
+        "values": [{
+            "row": "2"
+        }, {
+            "row": "2"
+        }]
+    }]
+}

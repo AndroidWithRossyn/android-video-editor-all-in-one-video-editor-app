@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#efeff4" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar"/>
+    <RelativeLayout android:id="@+id/RlFilename" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginRight="5dp" android:layout_below="@+id/toolbar">
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textStyle="bold" android:textColor="#000000" android:id="@+id/textfilename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_above="@+id/SeekbarLayout" android:layout_below="@+id/RlFilename">
+        <RelativeLayout android:id="@+id/rl_container" android:layout_width="match_parent" android:layout_height="320dp">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <VideoView android:id="@+id/videoview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <ImageView android:id="@+id/ivScreen" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_centerInParent="true" android:contentDescription="@null"/>
+            <com.edmodo.cropper.CropImageView android:id="@+id/cropperView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/SeekbarLayout" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_above="@+id/TimeLayout">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2" android:layout_alignParentLeft="true">
+            <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.7">
+                <ImageView android:id="@+id/buttonply" android:background="@drawable/play2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.3">
+                <com.androworld.allinonevideoeditor.VideoSliceSeekBar
+                    android:id="@+id/seek_bar" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/TimeLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="10dp" android:layout_above="@+id/CropLayout">
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textColor="@color/colorPrimary" android:id="@+id/left_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:layout_centerVertical="true"/>
+        <com.androworld.allinonevideoeditor.MetaFont
+            android:textAppearance="?android:attr/textAppearance" android:textSize="15dp" android:textColor="@color/colorPrimary" android:layout_gravity="right" android:id="@+id/right_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/CropLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="20dp" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:id="@+id/back_Original" android:background="@drawable/button_border_shape" android:visibility="gone" android:clickable="false" android:layout_width="152dp" android:layout_height="45dp" android:layout_centerInParent="true"/>
+                <RelativeLayout android:id="@+id/imgbtn_Original" android:background="@drawable/button_shape" android:clickable="true" android:layout_width="145dp" android:layout_height="45dp" android:layout_centerInParent="true">
+                    <com.androworld.allinonevideoeditor.MetaFont
+                        android:textSize="18dp" android:textColor="@color/color_white_color" android:gravity="center" android:clickable="false" android:layout_width="150dp" android:layout_height="50dp" android:text="Original" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:id="@+id/back_Fit" android:background="@drawable/button_border_shape" android:visibility="visible" android:clickable="false" android:layout_width="152dp" android:layout_height="45dp" android:layout_centerInParent="true"/>
+                <RelativeLayout android:id="@+id/imgbtn_Fit" android:background="@drawable/button_shape" android:clickable="true" android:layout_width="145dp" android:layout_height="45dp" android:layout_centerInParent="true">
+                    <com.androworld.allinonevideoeditor.MetaFont
+                        android:textSize="18dp" android:textColor="@color/color_white_color" android:gravity="center" android:clickable="false" android:layout_width="150dp" android:layout_height="50dp" android:text="Fit" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

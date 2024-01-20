@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/musicPanel" android:layout_width="match_parent" android:layout_height="70dp">
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/imageView1" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp" android:src="@drawable/music_icon"/>
+    <com.androworld.allinonevideoeditor.MetaFont
+        android:textSize="16dp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/row_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="music.mp3" android:singleLine="true" android:layout_weight="1"/>
+    <ToggleButton android:layout_gravity="center_vertical" android:id="@+id/toggleButton1" android:background="@drawable/music_radio_btn_selector" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="40dp" android:layout_height="40dp" android:button="@null" android:textOn="" android:textOff="" android:minWidth="2dp" android:minHeight="2dp" style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>

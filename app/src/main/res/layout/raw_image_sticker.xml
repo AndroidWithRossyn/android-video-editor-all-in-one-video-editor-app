@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.androworld.allinonevideoeditor.videocollage.stickers.ClgSingleFingerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:centerInParent="true"
+    app:image_height="150dp"
+    app:image_width="250dp"
+    app:push_deleteimage="@drawable/push_btn_deleteselector"
+    app:push_image="@drawable/push_btn_selector"
+    app:push_image_height="30dp"
+    app:push_image_width="30dp" />

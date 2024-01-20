@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff7f7f7"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Color"
+                android:textColor="@color/Header_Font_Color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/shape_triangle"
+                    android:rotation="180" />
+            </LinearLayout>
+
+            <Gallery
+                android:id="@+id/recyclerViewTxtColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Text Opacity : "
+                    android:textColor="@color/Header_Font_Color" />
+
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:id="@+id/txtOpacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/Header_Font_Color" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/textOpacitySeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:maxHeight="2dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/seekbar_thumb" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Background Color"
+                    android:textColor="@color/Header_Font_Color" />
+
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    app:tbAnimate="true"
+                    app:tbAsDefaultOn="true"
+                    app:tbBorderWidth="1dp"
+                    app:tbOffBorderColor="@color/colorPrimary"
+                    app:tbOffColor="@color/colorPrimary"
+                    app:tbOnColor="@color/colorPrimary"
+                    app:tbSpotColor="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/shape_triangle"
+                    android:rotation="180" />
+            </LinearLayout>
+
+            <Gallery
+                android:id="@+id/recyclerViewTxtBGColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Background Opacity : "
+                    android:textColor="@color/Header_Font_Color" />
+
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:id="@+id/bgOpacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/Header_Font_Color" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/textOpacityBGSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:maxHeight="2dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/seekbar_thumb" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

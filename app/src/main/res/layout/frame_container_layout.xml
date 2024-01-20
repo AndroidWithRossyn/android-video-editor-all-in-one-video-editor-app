@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/flImageDraw" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_gravity="center" android:id="@+id/ivThumbImage" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@android:color/transparent" android:scaleType="fitXY" android:contentDescription="@null"/>
+        </FrameLayout>
+        <com.androworld.allinonevideoeditor.videocollage.utils.BorderFrameLayout
+            android:layout_gravity="center" android:id="@+id/flBorder" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <Button android:layout_gravity="center" android:id="@+id/btnAdd" android:background="@drawable/frameadd_btn_selector" android:layout_width="32dp" android:layout_height="32dp"/>
+        <Button android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/btnClear" android:background="@drawable/delete_frame_unpresed" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp"/>
+        <Button android:layout_gravity="bottom|right|center_vertical|center_horizontal|center" android:id="@+id/btnEdit" android:background="@drawable/edit_frame_unpresed" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" android:layout_margin="4dp"/>
+    </FrameLayout>
+</LinearLayout>

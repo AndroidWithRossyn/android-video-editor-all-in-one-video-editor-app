@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <RelativeLayout android:id="@+id/A11" android:background="@drawable/button_shape" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="25dp" android:textColor="@color/color_white_color" android:id="@+id/A1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Create Amazing Story" android:layout_centerHorizontal="true"/>
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="22dp" android:textColor="@color/color_white_color" android:id="@+id/A2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="With" android:layout_below="@+id/A1" android:layout_centerHorizontal="true"/>
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="25dp" android:textColor="@color/color_white_color"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:text="Photo To Video" android:layout_below="@+id/A2" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/A12" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_below="@+id/A11">
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="30dp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/Text" android:background="@drawable/circle_shape_1" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="Go" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

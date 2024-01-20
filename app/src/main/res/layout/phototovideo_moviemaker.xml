@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#efeff4" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:background="@drawable/photoframe_bg" android:padding="3dp" android:layout_width="340dp" android:layout_height="340dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+            <FrameLayout android:layout_gravity="center" android:id="@+id/flPreview" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_gravity="center"
+                    android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/slide_1" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/slide_frame" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+                <Button android:id="@+id/btnPlay" android:background="@drawable/play2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="5dp" android:minHeight="5dp" android:layout_centerInParent="true"/>
+                <SeekBar android:id="@+id/sbVideo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:maxHeight="2dp" android:progressDrawable="@drawable/progressdrawable" android:minHeight="2dp" android:thumb="@drawable/seekbar_thumb" android:thumbOffset="5dp" android:layout_weight="1"/>
+                <com.androworld.allinonevideoeditor.MetaFont
+                    android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/tvEndVideo1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="00:00" android:layout_below="@+id/sbVideo" android:layout_alignParentRight="true"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical"
+                android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                <HorizontalScrollView android:id="@+id/hsFrameList" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="false" android:overScrollMode="ifContentScrolls">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/llFrameList" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                </HorizontalScrollView>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llSeekbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <SeekBar android:id="@+id/sbInterval" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:maxHeight="2dp" android:progressDrawable="@drawable/progressdrawable" android:minHeight="2dp" android:thumb="@drawable/seekbar_thumb" android:thumbOffset="0dp" android:layout_weight="1"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="7dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+                        <com.androworld.allinonevideoeditor.MetaFont
+                            android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="left" android:id="@+id/tvInterval" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 Sec. per Photo" android:singleLine="true" android:layout_weight="1"/>
+                        <com.androworld.allinonevideoeditor.MetaFont
+                            android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="right" android:id="@+id/tvSeekUserSec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Movie Length : 05 Sec." android:singleLine="true" android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout android:id="@+id/llSelctedMusic" android:padding="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:textSize="9dp" android:textColor="@color/colorPrimary" android:id="@+id/tvMusicTrackName" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:textSize="10sp" android:textColor="@color/colorPrimary" android:id="@+id/tvTrackDuration" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:textColor="@color/colorPrimary" android:id="@+id/tvStartVideo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00"/>
+                            <SeekBar android:id="@+id/sbMusic" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:maxHeight="2dp" android:progressDrawable="@drawable/progressdrawable" android:minHeight="2dp" android:thumb="@drawable/seekbar_thumb" android:thumbOffset="5dp" android:layout_weight="1"/>
+                            <com.androworld.allinonevideoeditor.MetaFont
+                                android:textColor="@color/colorPrimary" android:id="@+id/tvEndVideo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00"/>
+                            <Button android:layout_gravity="center_vertical" android:id="@+id/btnCloseMusic" android:background="@drawable/ic_close" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="5dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="50dp">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                        <Button android:id="@+id/btnFrame" android:background="@drawable/frame_presed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="5dp" android:minHeight="5dp" android:layout_centerInParent="true" style="?android:attr/borderlessButtonStyle"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                        <Button android:id="@+id/selectmusic" android:background="@drawable/music_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="5dp" android:minHeight="5dp" android:layout_centerInParent="true" style="?android:attr/borderlessButtonStyle"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                        <Button android:id="@+id/btnSecond" android:background="@drawable/time_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="5dp" android:minHeight="5dp" android:layout_centerInParent="true" style="?android:attr/borderlessButtonStyle"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/flRecycle" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</RelativeLayout>

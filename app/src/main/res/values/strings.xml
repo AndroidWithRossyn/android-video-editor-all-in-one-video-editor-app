@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Video Editor</string>
+
+    <string name="appid">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="nativeid">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="ad_attribution" translatable="false">Ad</string>
+
+    <string name="AudioCompressor">AudioCompressor</string>
+    <string name="AudioCutter">AudioCutter</string>
+    <string name="AudioJoiner">AudioJoiner</string>
+    <string name="AudioVideoMixer">AudioVideoMixer</string>
+    <string name="FastMotionVideo">FastMotionVideo</string>
+    <string name="MainFolderName">VEditor</string>
+    <string name="PhotoToVideo">PhotoToVideo</string>
+    <string name="SlowMotionVideo">SlowMotionVideo</string>
+    <string name="VideoCollage">VideoCollage</string>
+    <string name="VideoCompressor">VideoCompressor</string>
+    <string name="VideoConverter">VideoConverter</string>
+    <string name="VideoCroper">VideoCroper</string>
+    <string name="VideoCutter">VideoCutter</string>
+    <string name="VideoJoiner">VideoJoiner</string>
+    <string name="VideoMirror">VideoMirror</string>
+    <string name="VideoMute">VideoMute</string>
+    <string name="VideoReverse">VideoReverse</string>
+    <string name="VideoRotate">VideoRotate</string>
+    <string name="VideoSplitter">VideoSplitter</string>
+    <string name="VideoToGIF">VideoToGIF</string>
+    <string name="VideoToImage">VideoToImage</string>
+    <string name="VideoToMP3">VideoToMP3</string>
+    <string name="VideoWatermark">VideoWatermark</string>
+    <string name="alert_ok_button">OK</string>
+    <string name="alert_title_failure">Error</string>
+    <string name="alert_title_success">Success</string>
+    <string name="app_folder_name2">VideoCollage</string>
+    <string name="artist_name">RingtoneMaker</string>
+    <string name="bad_extension_error">Sorry, RingtoneMaker is not yet able to edit files of type</string>
+    <string name="cancel">Cancel</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="delete_tmp_error">Error deleting temporary file</string>
+    <string name="end_marker">End marker</string>
+    <string name="no_extension_error">Sorry, RingtoneMaker can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+    <string name="no_sdcard">Sorry, can not run unless you have an SD Card inserted.</string>
+    <string name="no_space_error">Your SD card is full, there is not enough space to save this file.</string>
+    <string name="no_unique_filename">Unable to find unique filename</string>
+    <string name="play">Play</string>
+    <string name="play_error">Unable to play this media file</string>
+    <string name="progress_dialog_loading">Loading…</string>
+    <string name="progress_dialog_saving">Saving…</string>
+    <string name="read_error">Error reading file</string>
+    <string name="s1">Save image</string>
+    <string name="s2">Allow Ad to store image in Picture gallery?</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
+    <string name="sdcard_readonly">Sorry, the SD Card is mounted as read-only.</string>
+    <string name="sdcard_shared">Sorry, can not run while your handset is mounted as a USB device.</string>
+    <string name="shipped_ffmpeg_version">n2.4.2</string>
+    <string name="start_marker">Start marker</string>
+    <string name="stop">Stop</string>
+    <string name="too_small_error">Can\'t save a file that small, try making it longer.</string>
+    <string name="write_error">Error writing file</string>
+
+    <string name="go_back_title">Want to go back?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="sure_close_app">Want to close the app?</string>
+    <string name="close">Close</string>
+
+</resources>

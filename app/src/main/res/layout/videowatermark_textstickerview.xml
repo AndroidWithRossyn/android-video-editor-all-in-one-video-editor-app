@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/textFullLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomTextLayout"
+            android:background="#00ffffff"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/addTxtEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="type here..."
+                android:maxLength="30"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="50dp" />
+
+            <View
+                android:id="@+id/viewBG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_above="@+id/bottomTextLayout"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <RelativeLayout
+            android:id="@+id/bottomTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/tabTop"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/Footer_Color">
+
+                <FrameLayout
+                    android:id="@+id/tabTextSticker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rightIcon" />
+
+                <LinearLayout
+                    android:id="@+id/rightIcon"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:onClick="addTextSticker">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/ic_done"
+                        android:scaleType="fitCenter" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.androworld.allinonevideoeditor.videowatermark.CustomViewPager
+                android:id="@+id/viewPagerTextSticker"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/tabTop"
+                android:background="#fff7f7f7" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

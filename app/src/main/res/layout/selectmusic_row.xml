@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rowLayout" android:layout_width="wrap_content" android:layout_height="60dp">
+        <ImageView android:id="@+id/iv_music" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:src="@drawable/ic_music" android:layout_centerVertical="true"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_toRightOf="@+id/iv_music" android:layout_centerVertical="true">
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="15dp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@+id/row_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="title" android:singleLine="true" android:layout_weight="1"/>
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="10dp" android:textColor="@color/colorPrimary" android:id="@+id/row_artist" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_below="@+id/row_title"/>
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="10dp" android:textColor="@color/colorPrimary" android:id="@+id/row_album" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_below="@+id/row_artist"/>
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="16dp" android:textColor="@color/colorPrimary" android:id="@+id/row_Duration" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="00:00" android:layout_toRightOf="@+id/row_title" android:layout_alignParentRight="true"/>
+            <com.androworld.allinonevideoeditor.MetaFont
+                android:textSize="10dp" android:textColor="@color/colorPrimary" android:id="@+id/row_Size" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:text="32 KB" android:layout_toRightOf="@+id/row_Duration" android:layout_below="@+id/row_title" android:layout_alignParentRight="true"/>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:background="@drawable/bg_music_sepreter" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginLeft="40dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>
